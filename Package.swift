@@ -22,7 +22,7 @@ let package = Package(
         .target(name: "SkipNFirebaseUI", dependencies: [
             "LocalModel",
             .product(name: "SkipFuseUI", package: "skip-fuse-ui")
-        ], plugins: [.plugin(name: "skipstone", package: "skip")]),
+        ], resources: [.process("Resources")], plugins: [.plugin(name: "skipstone", package: "skip")]),
         .target(name: "LocalModel", dependencies: [
             .product(name: "SkipModel", package: "skip-model"),
             .product(name: "SkipFuse", package: "skip-fuse")

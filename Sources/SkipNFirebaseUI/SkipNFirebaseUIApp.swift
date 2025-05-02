@@ -13,7 +13,9 @@ let logger: Logger = Logger(subsystem: "com.floatingaxeheadministries.skipnfireb
     }
 
     public var body: some View {
-        ContentView()
+        @State var navagationController = NavagationController()
+        RootView()
+         .environment(navagationController)
             .task {
                 logger.info("Skip app logs are viewable in the Xcode console for iOS; Android logs can be viewed in Studio or using adb logcat")
             }
