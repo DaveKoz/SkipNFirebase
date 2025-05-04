@@ -1,5 +1,7 @@
 import SwiftUI
 import SkipNFirebaseUI
+import FirebaseCore
+import FirebaseMessaging
 
 /// The entry point to the app simply loads the App implementation from SPM module.
 @main struct AppMain: App {
@@ -41,6 +43,7 @@ class AppMainDelegate: NSObject, AppMainDelegateBase {
 
     #if canImport(UIKit)
     func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        FirebaseApp.configure()
         AppDelegate.shared.onStart()
         return true
     }
