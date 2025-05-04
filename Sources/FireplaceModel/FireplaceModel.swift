@@ -8,9 +8,9 @@ import Foundation
 //import FirebaseFirestore
 //#endif
 
-public actor FirebaseModel {
+public actor FireplaceModel {
     /// The shared model singleton
-       public static let shared = FirebaseModel()
+       public static let shared = FireplaceModel()
     
 //        public init() {
 //            // Initialize Firebase-related resources here if needed

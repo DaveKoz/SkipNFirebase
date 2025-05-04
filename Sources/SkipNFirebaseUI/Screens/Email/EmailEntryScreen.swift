@@ -1,6 +1,6 @@
 import SkipFuseUI
 import LocalModel
-import FirebaseModel
+import FireplaceModel
 
 
 
@@ -94,7 +94,7 @@ struct EmailEntryScreen: View {
     
     private func handleSignIn() {
         Task {
-            let names = await FirebaseModel.shared.fetchAnimalNames()
+            let names = await FireplaceModel.shared.fetchAnimalNames()
             print(names)
         }
     }

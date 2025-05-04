@@ -9,7 +9,7 @@ let package = Package(
     products: [
         .library(name: "SkipNFirebaseUI", type: .dynamic, targets: ["SkipNFirebaseUI"]),
         .library(name: "LocalModel", type: .dynamic, targets: ["LocalModel"]),
-        .library(name: "FirebaseModel", type: .dynamic, targets: ["FirebaseModel"]),
+        .library(name: "FireplaceModel", type: .dynamic, targets: ["FireplaceModel"]),
     ],
     dependencies: [
         .package(url: "https://source.skip.tools/skip.git", from: "1.5.6"),
@@ -26,11 +26,11 @@ let package = Package(
             .product(name: "SkipFirebaseMessaging", package: "skip-firebase")
         ], resources: [.process("Resources")], plugins: [.plugin(name: "skipstone", package: "skip")]),
         .target(name: "LocalModel", dependencies: [
-            "FirebaseModel",
+            "FireplaceModel",
             .product(name: "SkipModel", package: "skip-model"),
             .product(name: "SkipFuse", package: "skip-fuse")
         ], plugins: [.plugin(name: "skipstone", package: "skip")]),
-        .target(name: "FirebaseModel", dependencies: [
+        .target(name: "FireplaceModel", dependencies: [
             .product(name: "SkipFoundation", package: "skip-foundation"),
             .product(name: "SkipModel", package: "skip-model"),
             .product(name: "SkipFirebaseFirestore", package: "skip-firebase"),
