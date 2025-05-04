@@ -19,6 +19,7 @@ import androidx.compose.runtime.saveable.rememberSaveableStateHolder
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.core.app.ActivityCompat
+import skip.firebase.core.FirebaseApp
 
 internal val logger: SkipLogger = SkipLogger(subsystem = "skip.nfirebase.ui", category = "SkipNFirebaseUI")
 
@@ -31,6 +32,7 @@ open class AndroidAppMain: Application {
         super.onCreate()
         logger.info("starting app")
         ProcessInfo.launch(applicationContext)
+        FirebaseApp.configure()
     }
 
     companion object {

@@ -93,10 +93,14 @@ struct EmailEntryScreen: View {
     
     
     private func handleSignIn() {
-        
+        Task {
+            let names = await FirebaseModel.shared.fetchAnimalNames()
+            print(names)
+        }
     }
+   
     private func handleSignUp() {
-        
+       
     }
     
     private func authenticateUser() {
