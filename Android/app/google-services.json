@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "90071030725",
+    "project_id": "skipnfirebase",
+    "storage_bucket": "skipnfirebase.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:90071030725:android:010ed446f7e5c872e609ac",
+        "android_client_info": {
+          "package_name": "com.floatingaxeheadministries.skipnfirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdYL_0iULlwyWime-4306FqlprWIz5Z9E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
