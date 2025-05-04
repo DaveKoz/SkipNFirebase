@@ -1,13 +1,7 @@
 import SkipFuseUI
+import LocalModel
+import FirebaseModel
 
-//
-//#if SKIP
-//  import SkipFirebaseAuth
-//  import SkipFirebaseFirestore
-//#else
-//  import FirebaseAuth
-//  import FirebaseFirestore
-//#endif
 
 
 struct EmailEntryScreen: View {
