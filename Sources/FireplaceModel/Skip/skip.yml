@@ -11,10 +11,6 @@
 skip:
   mode: 'transpiled'
   bridging: true
-  # if i add Bridging true I get /Users/davidkozikowski/Library/Developer/Xcode/DerivedData/SkipNFirebaseUI-fqywiwltfqtbqofdddvvbhobxrrw/Build/Intermediates.noindex/BuildToolPluginIntermediates/skipnfirebase.output/SkipNFirebaseUI/skipstone/SkipNFirebaseUI/build/swift/plugins/outputs/swift/FireplaceModel/destination/skipstone/SkipBridgeGenerated/FireplaceModel_Bridge.swift:4:14 invalid redeclaration of 'FireplaceModel'
-
-     #/Users/davidkozikowski/Library/Developer/Xcode/DerivedData/SkipNFirebaseUI-fqywiwltfqtbqofdddvvbhobxrrw/Build/Intermediates.noindex/BuildToolPluginIntermediates/skipnfirebase.output/SkipNFirebaseUI/skipstone/SkipNFirebaseUI/src/main/swift/Sources/FireplaceModel/FireplaceModel.swift:11:14 invalid redeclaration of 'FireplaceModel'
-
 
 
   
