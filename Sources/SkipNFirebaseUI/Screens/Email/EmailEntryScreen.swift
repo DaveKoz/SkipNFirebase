@@ -94,18 +94,32 @@ struct EmailEntryScreen: View {
     
     private func handleSignIn() {
         Task {
-            let names = await FireplaceModel.shared.fetchAnimalNames()
-            print(names)
+            let client = SignInClient()
+            client.handleSignIn(email: email, password: password)
+            // Add a slight delay to wait for error assignment if needed
+            try? await Task.sleep(nanoseconds: 300_000_000) // 0.3 seconds
+            if client.error == nil {
+                navagationController.LogedInUser = email
+                navagationController.isHomeActive = true
+            } else {
+                error = client.error ?? "Unknown error"
+            }
         }
     }
    
     private func handleSignUp() {
-       
-    }
-    
-    private func authenticateUser() {
-        print("Attempting to authenticate with Email and Password")
-        
+        Task {
+            let client = SignUpClient()
+            client.handleSignUp(email: email, password: password, firstName: firstName, lastName: lastName)
+            // Add a slight delay to wait for error assignment if needed
+            try? await Task.sleep(nanoseconds: 300_000_000) // 0.3 seconds
+            if client.error == nil {
+                navagationController.LogedInUser = email
+                navagationController.isHomeActive = true
+            } else {
+                error = client.error ?? "Unknown error"
+            }
+        }
     }
     
 }

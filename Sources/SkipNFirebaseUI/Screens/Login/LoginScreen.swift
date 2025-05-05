@@ -53,12 +53,7 @@ struct LoginScreen: View {
 
     private func continueAsGuest() {
         print("Continue as Guest tapped")
-        navagationController.isHomeActive = true
-    }
-        
-    private func authenticateWithEmail() {
-        print("Authenticate with Email tapped")
-        // Add email authentication logic
+        navagationController.LogedInUser = "Guest"
         navagationController.isHomeActive = true
     }
 
