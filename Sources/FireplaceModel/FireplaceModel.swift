@@ -1,12 +1,11 @@
+#if !SKIP_BRIDGE
 import Foundation
 
-// build error: /Users/davidkozikowski/Library/Developer/Xcode/DerivedData/SkipNFirebaseUI-fqywiwltfqtbqofdddvvbhobxrrw/Build/Intermediates.noindex/BuildToolPluginIntermediates/skipnfirebase.output/SkipNFirebaseUI/skipstone/SkipNFirebaseUI/src/main/swift/Sources/FirebaseModel/FirebaseModel.swift:5:8 no such module 'FirebaseFirestore'
-
-//#if SKIP
-//import SkipFirebaseFirestore
-//#else
-//import FirebaseFirestore
-//#endif
+#if SKIP
+import SkipFirebaseFirestore
+#else
+import FirebaseFirestore
+#endif
 
 public actor FireplaceModel {
     /// The shared model singleton
@@ -22,4 +21,4 @@ public actor FireplaceModel {
     
 }
     
-   
+#endif
