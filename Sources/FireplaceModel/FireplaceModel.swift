@@ -1,5 +1,4 @@
 #if !SKIP_BRIDGE
-import Foundation
 
 #if SKIP
 import SkipFirebaseFirestore
@@ -11,14 +10,16 @@ public actor FireplaceModel {
     /// The shared model singleton
        public static let shared = FireplaceModel()
     
-//        public init() {
-//            // Initialize Firebase-related resources here if needed
-//        }
+    private let firestore: Firestore
+    
+    private init() {
+        self.firestore = Firestore.firestore()
+    }
     
     public func fetchAnimalNames() -> [String] {
         return ["Dog", "Cat", "Elephant", "Lion", "Tiger", "Bear", "Giraffe", "Zebra", "Kangaroo", "Panda"]
     }
     
 }
-    
+
 #endif
