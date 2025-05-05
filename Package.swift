@@ -36,5 +36,6 @@ let package = Package(
             .product(name: "SkipFirebaseFirestore", package: "skip-firebase"),
             .product(name: "SkipFirebaseAuth", package: "skip-firebase")
         ], plugins: [.plugin(name: "skipstone", package: "skip")]),
-    ]
+    ],
+    swiftLanguageModes: [.v5]
 )

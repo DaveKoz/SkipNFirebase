@@ -10,7 +10,7 @@
 # this is a natively-compiled module
 skip:
   mode: 'native'
-  bridging: true
+
   
   
   

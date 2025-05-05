@@ -6,6 +6,38 @@
 This is a [Skip](https://skip.tools) dual-platform app project.
 It builds a native app for both iOS and Android.
 
+## Custom setup required as of 5/5/2025
+
+Look at the Package.swift take note of  "swiftLanguageModes: [.v5]" this is required for the bridging to work.
+Add plugins: [.plugin(name: "skipstone", package: "skip")]) to the last module
+Add .package(url: "https://source.skip.tools/skip-firebase.git", "0.0.0"..<"2.0.0")
+
+
+Look at the skip.yml located in Sources -> FireplaceModel -> Skip notice 
+skip:
+  mode: 'transpiled'
+  bridging: true
+  
+Look at FireplaceModel.swift  located in Sources -> FireplaceModel notice that the entire file needs to be wrapped with
+
+" #if !SKIP_BRIDGE  "
+
+" #endif  "
+
+General Firebase setup
+
+Replace the GoogleService-Info.plist and the google-services.json files with you own
+Add "id("com.google.gms.google-services") version "4.4.2" apply true" to Android -> app -> build.gradle.kts
+Add import skip.firebase.core.FirebaseApp to Android -> app -> src -> main ->kotlin -> Main.kt
+Also add FirebaseApp.configure() to onCreate like so
+       override fun onCreate() {
+        super.onCreate()
+        logger.info("starting app")
+        ProcessInfo.launch(applicationContext)
+        FirebaseApp.configure()
+    }
+
+
 ## Building
 
 This project is both a stand-alone Swift Package Manager module,
